@@ -109,6 +109,9 @@ Plugin 'klen/python-mode'
 " let g:pymode_rope = 1
 " let g:pymode_rope_completion = 1
 
+" Key map for pymode lint auto
+noremap <Leader>pl :PymodeLintAuto<CR>
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
