@@ -45,13 +45,17 @@ map <c-h> <c-w>h
 map <Leader>n <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
 
+" easier moving between buffers
+map <Leader>l <esc>:bnext<CR>
+map <Leader>h <esc>:bprev<CR>
+
 " map sort function to a key
 vnoremap <Leader>s :sort<CR>
 
 " Show whitespace
 " MUST be inserted BEFORE the colorscheme command
-" autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-" au InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+au InsertLeave * match ExtraWhitespace /\s\+$/
 
 
 " easier formatting of paragraphs
@@ -65,6 +69,11 @@ set undolevels=700
 
 " Display line number
 set number
+
+" Highlight search matches
+set hlsearch
+" Press Space to turn off highlighting and clear any message already displayed.
+nnoremap <Leader> <Space> :nohlsearch<Bar>:echo<CR>
 
 " Vundle setting up
 set nocompatible              " be iMproved, required
@@ -110,8 +119,16 @@ Plugin 'klen/python-mode'
 " let g:pymode_rope_completion = 1
 
 " Key map for pymode lint auto
-noremap <Leader>pl :PymodeLintAuto<CR>
+noremap <Leader>pl <esc> :PymodeLintAuto<CR>
 
+" If you prefer the Omni-Completion tip window to close when a selection is
+" made, these lines close it on movement in insert mode or when leaving
+" insert mode
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+" Plugin fontzoom.vim
+" Plugin 'thinca/vim-fontzoom'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
