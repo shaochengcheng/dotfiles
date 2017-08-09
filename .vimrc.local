@@ -1,0 +1,56 @@
+" Color schemas
+colorscheme solarized
+" colorscheme ir_black
+" colorscheme molokai
+" colorscheme peaksea
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
+" Toggle paste mode on and off
+map <leader>pp :setlocal paste!<cr>
+
+" Toggle Spell checking
+map <leader>ss :setlocal spell! spelllang=en_us<CR>
+
+" Move line up or down
+" This is for mac characters
+" up is <A+k> and down is <A+j>
+nnoremap ∆ :m .+1<CR>==
+nnoremap ˚ :m .-2<CR>==
+inoremap ∆ <Esc>:m .+1<CR>==gi
+inoremap ˚ <Esc>:m .-2<CR>==gi
+vnoremap ∆ :m '>+1<CR>gv=gv
+vnoremap ˚ :m '<-2<CR>gv=gv
+
+" nnoremap <A-j> :m .+1<CR>==
+" nnoremap <A-k> :m .-2<CR>==
+" inoremap <A-j> <Esc>:m .+1<CR>==gi
+" inoremap <A-k> <Esc>:m .-2<CR>==gi
+" vnoremap <A-j> :m '>+1<CR>gv=gv
+" vnoremap <A-k> :m '<-2<CR>gv=gv
+
+" Settings for python
+" no wrap
+autocmd FileType python set nowrap
+" colorcolumn=80
+autocmd FileType python set colorcolumn=80
+
+" YouCompleteMe
+" let g:ycm_python_binary_path = '/usr/bin/python'
+" let g:ycm_server_python_interpreter = '/usr/bin/python'
+" let g:ycm_autoclose_preview_window_after_completion=1
+" let g:ycm_auto_trigger = 1
+" let g:ycm_min_num_identifier_candidate_chars = 1
+" let g:ycm_min_num_of_chars_for_completion = 2
+
+" Keymapping for YouCompleteMe
+" nnoremap <leader>g :YcmCompleter GoTo<CR>
+" nnoremap <leader>d :YcmCompleter GetDoc<CR>
+
+"Pymode
+" let g:pymode_rope = 0
+" let g:pymode_rope_completetion = 0
+
+let g:pymode_rope_goto_definition_bind = '<Leader>g'
+

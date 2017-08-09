@@ -1,0 +1,2 @@
+" Bundles I need
+let g:spf13_bundle_groups=['general', 'programming', 'misc', 'python', 'neocomplete']

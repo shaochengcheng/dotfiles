@@ -8,3 +8,9 @@ Host felix
     Hostname 192.52.2.17
     ForwardX11Trusted yes
     ForwardX11 yes
+
+Host bigred2
+    Hostname %h.uits.iu.edu
+    User shaoc
+    ForwardX11Trusted yes
+    ForwardX11 yes
