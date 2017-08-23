@@ -1,2 +1,12 @@
-" Bundles I need
-let g:spf13_bundle_groups=['general', 'programming', 'misc', 'python', 'neocomplete']
+" Bundles{
+
+    " let g:spf13_bundle_groups=['general', 'programming', 'misc', 'python', 'neocomplete']
+    let g:spf13_bundle_groups=['general', 'programming', 'python', 'misc', 'neocomplete']
+"}
+
+
+" set spf13 options{
+
+    let g:spf13_no_omni_complete = 1
+    let g:spf13_noninvasive_completion = 0
+"}

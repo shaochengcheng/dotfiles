@@ -9,7 +9,7 @@ Host felix
     ForwardX11Trusted yes
     ForwardX11 yes
 
-Host bigred2
+Host bigred2 karst
     Hostname %h.uits.iu.edu
     User shaoc
     ForwardX11Trusted yes

@@ -1,0 +1,8 @@
+" New bundle for vim layout
+Bundle 'spolu/dwm.vim'
+Bundle 'Chiel92/vim-autoformat'
+" Bundle 'tpope/vim-fugitive'
+UnBundle 'scrooloose/syntastic'
+UnBundle 'yssource/python.vim'
+UnBundle 'python_match.vim'
+UnBundle 'pythoncomplete'
